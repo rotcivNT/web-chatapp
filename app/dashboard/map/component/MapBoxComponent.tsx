@@ -132,7 +132,11 @@ const MapboxComponent = () => {
 
 
                 const markerElement = document.createElement('div');
-                ReactDOM.render(<UserMarker />, markerElement);
+                const root = ReactDOM.createRoot(markerElement as HTMLElement);
+                root.render(
+                  
+                    <UserMarker />
+                );
                 // Create popup for user
                 const popupEl = document.createElement('div');
                 const button = document.createElement('button');
