@@ -4,7 +4,6 @@ import toast, { Toast, Toaster } from "react-hot-toast";
 import { X } from "lucide-react";
 import { ChangeEvent, useEffect, useState } from "react";
 
-
 interface UpdateGroupInfoModalProps {
   openModal: () => void;
   closeModal: () => void;
@@ -21,7 +20,6 @@ function UpdateGroupInfoModal({
   closeModal,
   currentConversation,
 }: UpdateGroupInfoModalProps): JSX.Element {
- 
   const [groupName, setGroupName] = useState<string>(""); // State lưu trữ tên nhóm
   const [groupAvatar, setGroupAvatar] = useState<File | null>(null); // State lưu trữ avatar nhóm
 
@@ -61,12 +59,12 @@ function UpdateGroupInfoModal({
       apiResponse = await userAPI.onUpdateGroupInfo(
         currentConversation.IDConversation,
         groupName,
-        groupAvatar
+        groupAvatar as File
       );
       console.log(apiResponse.data);
       if (apiResponse && apiResponse.data === "Success") {
         toast.success("Cập nhật thông tin nhóm thành công");
-        setGroupName(groupName);  
+        setGroupName(groupName);
         setGroupAvatar(groupAvatar);
       } else {
         toast.error("Cập nhật thông tin nhóm thất bại");

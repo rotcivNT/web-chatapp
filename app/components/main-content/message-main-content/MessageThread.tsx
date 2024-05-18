@@ -138,7 +138,7 @@ export default function MessageThread() {
           {messageList &&
             messageList.map((item) => (
               <MessageItem
-                ref={(el: HTMLDivElement) =>
+                ref={(el: any) =>
                   (messageItemrefs.current[item.IDMessageDetail] = el)
                 }
                 message={item}

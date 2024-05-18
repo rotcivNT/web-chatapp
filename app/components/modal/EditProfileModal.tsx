@@ -1,5 +1,4 @@
 import { userAPI } from "@/api/userAPI";
-import { formSchema } from "@/app/auth/sign-up/identify/info-signup/page";
 import DatePicker from "@/app/components/sign-up/DatePicker";
 import { useBearStore } from "@/app/global-state/store";
 import { Button } from "@/components/ui/button";
@@ -23,6 +22,7 @@ import Image from "next/image";
 import { ChangeEvent, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { formSchema } from "../sign-up/InfoSignup";
 
 interface IProps {
   fullname: string;
