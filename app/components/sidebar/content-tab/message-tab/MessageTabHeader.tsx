@@ -19,7 +19,7 @@ const MessageTabHeader: React.FC<MessageTabHeaderProps> = ({
   return (
     <Fragment>
       <div className="h-16 px-4 flex items-center gap-4">
-        <Search searchTerm={searchTerm} onSearchChange={onSearchChange} />
+        <Search />
 
         <div className="flex gap-3">
           <Button
