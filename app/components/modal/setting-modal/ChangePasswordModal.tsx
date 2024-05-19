@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { userAPI } from "@/api/userAPI";
+import { userAPI } from "@/apis/userAPI";
 import { useToast } from "@/components/ui/use-toast";
 import { useSession } from "next-auth/react";
 type propTypes = {
@@ -22,7 +22,7 @@ const ChangePassWordModal: React.FC<propTypes> = ({ onClose }) => {
         setError("");
       }
     }
-  },[session,status]);
+  }, [session, status]);
 
   const handleChangePassword = async () => {
     const currentPassword = currentPasswordRef.current?.value;

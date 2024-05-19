@@ -1,4 +1,4 @@
-import { userAPI } from "@/api/userAPI";
+import { userAPI } from "@/apis/userAPI";
 import toast, { Toast, Toaster } from "react-hot-toast";
 
 import { X } from "lucide-react";

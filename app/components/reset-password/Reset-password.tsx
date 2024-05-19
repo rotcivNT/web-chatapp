@@ -21,7 +21,7 @@ import {
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { REGEXP_ONLY_DIGITS } from "input-otp";
-import { userAPI } from "@/api/userAPI";
+import { userAPI } from "@/apis/userAPI";
 
 declare global {
   interface Window {
@@ -104,7 +104,7 @@ function SignUp() {
         variant: "destructive",
       });
       return;
-    }    
+    }
     onCaptchaVerify();
     const appVerifier = window.recaptchaVerifier;
 

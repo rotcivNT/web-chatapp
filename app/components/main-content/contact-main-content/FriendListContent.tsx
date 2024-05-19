@@ -3,7 +3,7 @@ import { ArrowUpDown, ArrowUpNarrowWide, Search } from "lucide-react";
 import { use, useEffect, useRef, useState } from "react";
 import FriendListItem from "./FriendListItem";
 import { axiosClient } from "@/configs/axios.config";
-import { userAPI } from "@/api/userAPI";
+import { userAPI } from "@/apis/userAPI";
 import { useSession } from "next-auth/react";
 
 import SearchFriend from "./components/SearchFriend";

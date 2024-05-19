@@ -1,5 +1,5 @@
 "use client";
-import { userAPI } from "@/api/userAPI";
+import { userAPI } from "@/apis/userAPI";
 import DatePicker from "@/app/components/sign-up/DatePicker";
 import { Button } from "@/components/ui/button";
 import {

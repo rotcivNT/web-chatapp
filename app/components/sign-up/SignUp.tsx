@@ -1,6 +1,6 @@
 "use client";
 
-import { userAPI } from "@/api/userAPI";
+import { userAPI } from "@/apis/userAPI";
 import { Button } from "@/components/ui/button";
 import {
   InputOTP,

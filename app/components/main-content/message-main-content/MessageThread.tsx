@@ -16,7 +16,7 @@ import {
 import MessageItem, { MessageItemLoading } from "./message/MessageItem";
 import { usePathname } from "next/navigation";
 import { useSession } from "next-auth/react";
-import { userAPI } from "@/api/userAPI";
+import { userAPI } from "@/apis/userAPI";
 import { Loader2 } from "lucide-react";
 
 export default function MessageThread() {

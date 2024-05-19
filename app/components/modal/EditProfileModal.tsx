@@ -1,4 +1,4 @@
-import { userAPI } from "@/api/userAPI";
+import { userAPI } from "@/apis/userAPI";
 import DatePicker from "@/app/components/sign-up/DatePicker";
 import { useBearStore } from "@/app/global-state/store";
 import { Button } from "@/components/ui/button";
