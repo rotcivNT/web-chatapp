@@ -1,4 +1,4 @@
-import { userAPI } from "@/api/userAPI";
+import { userAPI } from "@/apis/userAPI";
 import { AuthOptions } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import FriendRequestItem from "./FriendRequestItem";
-import { userAPI } from "@/api/userAPI";
+import { userAPI } from "@/apis/userAPI";
 import { useSession } from "next-auth/react";
 import { useBearStore } from "@/app/global-state/store";
 

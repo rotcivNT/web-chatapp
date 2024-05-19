@@ -2,7 +2,7 @@
 "use client";
 import { Lock, PackageCheck } from "lucide-react";
 
-import { userAPI } from "@/api/userAPI";
+import { userAPI } from "@/apis/userAPI";
 import { useToast } from "@/components/ui/use-toast";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";

@@ -1,5 +1,5 @@
 "use client";
-import { userAPI } from "@/api/userAPI";
+import { userAPI } from "@/apis/userAPI";
 import { useBearStore } from "@/app/global-state/store";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {

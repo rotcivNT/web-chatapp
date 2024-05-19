@@ -17,7 +17,7 @@ import { useSession } from "next-auth/react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import Peer from "simple-peer";
-import { userAPI } from "@/api/userAPI";
+import { userAPI } from "@/apis/userAPI";
 
 interface IProps {
   openCamera: boolean;

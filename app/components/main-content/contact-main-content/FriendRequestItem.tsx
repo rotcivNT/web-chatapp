@@ -1,4 +1,4 @@
-import { userAPI } from "@/api/userAPI";
+import { userAPI } from "@/apis/userAPI";
 import { useBearStore } from "@/app/global-state/store";
 import { convertISOToDDMMYYY } from "@/app/utils/datetimeUtils";
 import Image from "next/image";

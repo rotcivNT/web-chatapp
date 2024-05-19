@@ -12,7 +12,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/components/ui/use-toast";
 import UserMarker from "./UserMarker";
 
-import { userAPI } from "@/api/userAPI";
+import { userAPI } from "@/apis/userAPI";
 import { axiosClient } from "@/configs/axios.config";
 
 import { socket } from "@/configs/socket";

@@ -2,7 +2,7 @@
 "use client";
 import { Lock, PackageCheck } from "lucide-react";
 
-import { userAPI } from "@/api/userAPI";
+import { userAPI } from "@/apis/userAPI";
 import { useToast } from "@/components/ui/use-toast";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -38,11 +38,14 @@ function Identify() {
     }
     const payload = {
       username: searchParams.get("phone") as string,
-      newpassword: password
+      newpassword: password,
     };
     if (password === confirmPassword) {
       try {
-        const resUpdatePassword = await userAPI.resetPassword("/auth/reset-password", payload);
+        const resUpdatePassword = await userAPI.resetPassword(
+          "/auth/reset-password",
+          payload
+        );
         if (resUpdatePassword.data.message === "Password is the same") {
           toast({
             title: "Cập nhật mật khẩu",
@@ -70,9 +73,9 @@ function Identify() {
           });
         }
       } catch (error) {
-        console.log(error)
+        console.log(error);
         toast({
-          title:  "Cập nhật không thành công",
+          title: "Cập nhật không thành công",
           description: "Có lỗi xảy ra khi gửi yêu cầu!",
           duration: 2000,
           variant: "destructive",
