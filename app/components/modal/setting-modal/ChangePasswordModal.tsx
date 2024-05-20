@@ -43,7 +43,7 @@ const ChangePassWordModal: React.FC<propTypes> = ({ onClose }) => {
       );
 
       if (resChangePassword.data.message === "Old password is incorrect") {
-        setError("Mật khẩu cũ phải giống mật khẩu hiện tại");
+        setError("Mật khẩu cũ không chính xác");
         return;
       }
       if (newPassword !== confirmPassword) {
