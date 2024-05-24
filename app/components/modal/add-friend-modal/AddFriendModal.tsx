@@ -63,14 +63,21 @@ const AddFriendModal: React.FC<AddFriendModalProps> = ({
   const handleFindUser = async () => {
     const res = await userAPI.getUserByPhone(`/user/get-user/${phone}`);
 
+    console.log(res);
     const payload = {
       senderId: userPhone,
       receiverId: res.ID,
     };
+
+    if (res?.message) {
+      setUser(null);
+      return;
+    }
     const resRequest = await axiosClient.post(
       "friend-request/check-request-exists",
       payload
     );
+
     if (resRequest?.data.code === 0) {
       setIsSend(true);
     }
@@ -78,7 +85,7 @@ const AddFriendModal: React.FC<AddFriendModalProps> = ({
   };
   const onKeyDown = (e: KeyboardEvent) => {
     if (e.key === "Enter") {
-      handleFindUser();
+      phone && handleFindUser();
     }
   };
 
@@ -174,7 +181,7 @@ const AddFriendModal: React.FC<AddFriendModalProps> = ({
                 </Button>
               </div>
               {/* phần 2 kết quả gần nhất*/}
-              {user && (
+              {user ? (
                 <div className=" text-black ">
                   <p className="pl-4 pt-2 text-neutral-600 text-[12px]">
                     Kết quả
@@ -197,13 +204,22 @@ const AddFriendModal: React.FC<AddFriendModalProps> = ({
                     />
                     <div className="ml-3">
                       <h2 className="text-sm font-[500]">{`${user.fullname}`}</h2>
-                      <p>{`+${phone}`}</p>
+                      <p>{`+${user.ID}`}</p>
                     </div>
                     {isHoverX && (
                       <div className="absolute top-4 right-4 ">
                         <X className="w-5" />
                       </div>
                     )}
+                  </div>
+                </div>
+              ) : (
+                <div>
+                  <p className="pl-4 pt-2 text-neutral-600 text-[12px]">
+                    Kết quả
+                  </p>
+                  <div className="flex justify-center">
+                    <p className="text-sm">Không tìm thấy người dùng</p>
                   </div>
                 </div>
               )}

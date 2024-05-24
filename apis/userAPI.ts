@@ -42,7 +42,10 @@ const userAPI = {
       password,
     }),
   getUserByPhone: (url: string) =>
-    axiosClient.get(`${url}`).then((res) => res.data),
+    axiosClient
+      .get(`${url}`)
+      .then((res) => res.data)
+      .catch((err) => err),
   resetPassword: (
     url: string,
     { username, newpassword }: { username: string; newpassword: string }
