@@ -1,7 +1,7 @@
 "use client";
 
 import { useBearStore } from "@/app/global-state/store";
-import { convertISOToDDMMYYY } from "@/app/utils/datetimeUtils";
+import { convertISOToDDMMYYY, convertISOToDDMMYYYWithOutHour } from "@/app/utils/datetimeUtils";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -82,7 +82,7 @@ const InfoUserModal: React.FC<propTypes> = ({ open, onClose }) => {
               <span className="flex-1 text-[#7589A3] font-[300]">
                 Ngày sinh
               </span>
-              <p className="flex-[3]">{convertISOToDDMMYYY(user?.birthday)}</p>
+              <p className="flex-[3]">{convertISOToDDMMYYYWithOutHour(user?.birthday)}</p>
             </div>
             <div className="flex my-2 gap-3">
               <span className="flex-1 text-[#7589A3] font-[300]">
